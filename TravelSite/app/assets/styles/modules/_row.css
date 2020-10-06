@@ -1,0 +1,48 @@
+.row
+{	
+
+	&--b-margin-single-col
+	{
+		margin-bottom: 1.2rem;
+	}
+	
+	@mixin atLarge
+	{
+		margin-right: -4rem;
+		margin-bottom: 0px;
+		overflow: hidden;
+		
+		
+		@mixin clearfix;
+		
+		&--b-margin-single-col
+		{
+			margin-bottom: 0px;
+		}
+
+		div
+		{
+			padding-right: 4rem;
+		}
+
+		&--large-4w
+		{
+			float: left;
+			width: 33%;
+		}
+
+		&--large-6w
+		{
+			float: left;
+			width: 50%;
+		}
+		
+		&--large-8w
+		{
+			float:left;
+			width: 67%;
+		}
+	}
+	
+}
+
