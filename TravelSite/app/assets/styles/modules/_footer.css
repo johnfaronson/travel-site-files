@@ -1,0 +1,14 @@
+.footer
+{
+    background-color:$mainBlue;
+    color: white;
+    padding: .5rem 0;
+    text-align: center;
+    
+    &--text
+    {
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 200;
+    }
+}

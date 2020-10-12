@@ -1,0 +1,177 @@
+.header
+{
+	position:absolute;
+	z-index: 2;
+	width: 100%;
+	
+	@mixin atLarge
+	{
+        background-color: rgba(47, 85, 114, .3);
+        
+	}
+	
+	&--btn
+	{
+       margin: .5rem 0 .5rem 0;
+	   @mixin atLarge
+	   {
+           float: right;
+	   }
+	}
+	
+	&--nav
+	{
+	   @mixin atLarge
+	   {
+            float: right;
+       }
+       margin: 1rem 0;
+       
+       ul
+       {
+        margin: 0;
+        padding: 0;
+        @mixin clearfix;
+       }
+       
+       li
+       {
+        list-style: none;
+        @mixin atLarge
+        {
+            float: left;
+            padding-right: 1.2rem;
+        }
+       }
+       
+       a
+       {
+         color: white;
+         font-weight: 300;
+         display: block;
+         padding: 5px 0;
+         
+         @mixin atLarge
+         {
+             text-decoration: none;
+         }
+       }
+	}
+	
+	&--logo
+	{
+	   position: absolute;
+	   background-color: $mainBlue;
+	   padding: 15px 25px;
+       left: 50%;
+       top: 0;
+       transform: translateX(-50%);
+	   
+	   @mixin atLarge
+	   {
+        left: auto;
+        transform: translateX(-0);
+        padding: 25px 35px;
+       }
+	}
+	
+	&--menu-content
+	{
+	   opacity:0;
+	   background-color: $mainBlue;	 
+	   z-index: -1;
+	   position: relative;
+	   transform: scale(.5);
+	   
+	   @mixin atLarge
+	   {
+	       opacity:1;
+	       display: block;
+           z-index: 1;
+           transform: scale(1);
+	   }  
+    }
+    
+    &--menu-content-is-visible
+    {
+          opacity:1;
+	      position: absolute;
+          top: 35px;
+          right: 10px;
+          text-align: center;
+          border: 3px solid black;
+          transition: all .3s ease-out;
+          z-index: 1;
+          transform: scale(1);
+    }
+        
+    &--menu-icon-close
+    {
+       &::before
+       {
+           transform: rotate(45deg) scalex(1.2);
+        }
+        
+       .header--menu-icon-canvas
+       {
+            opacity: 0;
+       }
+       
+       &::after
+       {
+           transform: rotate(-45deg) scalex(1.2);
+       }
+    }
+        
+    &--menu-icon
+    { 
+        width:20px;
+        height: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        
+        &::before
+        {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 20px;
+            height: 4px;
+            background-color: white;
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+        }
+        
+        &-canvas
+        {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            width: 20px;
+            height: 4px;
+            background-color: white;
+        }
+        
+        &::after
+        {
+            content: "";
+	        position: absolute;
+            top: 20px;
+            left: 0;
+            width: 20px;
+            height: 4px;
+            background-color: white;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
+
+        @mixin atLarge
+        {
+            display: none;
+		    width:0;
+		    height: 0;
+        }
+    }
+}

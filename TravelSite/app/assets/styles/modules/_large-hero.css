@@ -3,22 +3,23 @@
 	border-bottom: 10px solid $mainBlue;
 	position: relative;
 	
-	&__image
+	&--image
 	{
 		display: block;
 	}
 	
-	&__text-content
+	&--text-content
 	{
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0;
 		width: 100%;
-		text-align: center;	
+		text-align: center;
+		margin: 2rem;	
 	}
 	
-	&__title
+	&--title
 	{
 		font-weight: 300;
 		color: $mainBlue;
@@ -32,7 +33,7 @@
 
 	}
 	
-	&__subtitle
+	&--subtitle
 	{
 		font-weight: 300;
 		color: $mainBlue;
@@ -45,7 +46,7 @@
 		}
 	}
 	
-	&__text
+	&--text
 	{
 		font-weight: 100;
 		color: #ffffff;

@@ -6,6 +6,29 @@
 		margin-bottom: 1.2rem;
 	}
 	
+	&--t-padding
+	{
+	   padding-top: 80px
+	}
+	
+	&--gutters-small
+	{
+        padding-left: 0px;
+	   
+        @mixin atSmall
+        {
+            padding-right: 40px;
+        }
+	   
+	   & > div
+	   {
+	       @mixin atSmall
+	       {
+                padding-right: 40px;
+	       }
+	   }
+	}
+	
 	@mixin atLarge
 	{
 		margin-right: -4rem;
@@ -20,7 +43,7 @@
 			margin-bottom: 0px;
 		}
 
-		div
+		& > div
 		{
 			padding-right: 4rem;
 		}
@@ -44,5 +67,20 @@
 		}
 	}
 	
+	/* Equal Height Rules */
+	&--equal-height
+	{
+	   @mixin atLarge
+	   {
+	       display: flex;
+	   }
+	   
+	   & > div
+	   {
+	       float: none;
+           display: flex;
+	   }
+	   
+	}
 }
 
