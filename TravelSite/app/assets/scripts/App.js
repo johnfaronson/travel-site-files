@@ -1,11 +1,45 @@
 import "../styles/styles.css"
-import MenuClass from "./modules/menu"
+import "lazysizes"
+import menuClass from "./modules/menu"
 import scrollRevealClass from "./modules/scrollReveal"
+import stickyHeaderClass from "./modules/stickyHeader"
+import sectionHighlighterClass from "./modules/sectionHighlighter"
+
+//original pre-load modal Js
+//import modal from "./modules/modal";
+//new modal();
+
+new menuClass();
+new stickyHeaderClass(".large-hero");
+new scrollRevealClass(".feature-item");
+new scrollRevealClass(".testimonial");
+new sectionHighlighterClass("our-beginning-link", "our-beginning");
+//new sectionHighlighterClass("our-beginning-link", "our-beginning2");
+new sectionHighlighterClass("features-link", "features");
+new sectionHighlighterClass("testimonals-link", "testimonials");
+let modal;
 
 
-let menu = new MenuClass();
-new scrollRevealClass(document.querySelectorAll(".feature-item"));
-new scrollRevealClass(document.querySelectorAll(".testimonial"));
+document.querySelectorAll(".open-modal").forEach(elem => 
+    {
+        elem.addEventListener("click", event =>
+            {
+                event.preventDefault();
+                if(typeof modal == "undefined")
+                {                   
+                    import(/* webpackChunkName: "modal" */ "./modules/modal").then(x =>
+                        {
+                           modal = new x.default();
+                           console.log("new modal: " +modal);
+                           setTimeout(() => modal.openModal(), 20);
+                        }).catch(() => console.log("Error while loading modal Js!"));
+                }else
+                {
+                    console.log("existing modal: " +modal);
+                    modal.openModal();
+                }
+            });
+    });
 
 if(module.hot)
 {

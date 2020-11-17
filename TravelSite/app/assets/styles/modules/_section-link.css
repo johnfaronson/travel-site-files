@@ -1,0 +1,22 @@
+.section-link
+{
+     color: white;
+     font-weight: 300;
+     display: block;
+     padding: 5px 0;
+     
+     @mixin atLarge
+     {
+         text-decoration: none;
+     }
+	
+    
+    &--highlight
+    {
+      @mixin atLarge
+      {
+          color: $mainOrange;
+          font-weight: 500;
+      }
+    }
+}

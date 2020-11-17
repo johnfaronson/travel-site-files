@@ -12,8 +12,8 @@
 	content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
 </head>
 <body>
-	<header class="header">
-		<div class="wrapper">
+	<header class="header sticky-header">
+		<div class="wrapper ">
 			<div class="header--logo">
 				<img src="assets/images/icons/clear-view-escapes.svg">
 			</div>
@@ -22,13 +22,13 @@
 			</div>
 			<div class="header--menu-content">
 				<div class="header--btn">
-					<a class="btn btn--orange" href="#">Get in Touch</a>
+					<a class="btn btn--orange open-modal" href="#">Get in Touch</a>
 				</div>
 				<nav class="header--nav">
 					<ul>
-						<li><a href="#our-beginning">Our Beginning</a></li>
-						<li><a href="#features">Features</a></li>
-						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a href="#our-beginning" id="our-beginning-link" class="section-link">Our Beginning</a></li>
+						<li><a href="#features" id="features-link" class="section-link">Features</a></li>
+						<li><a href="#testimonials" id="testimonals-link" class="section-link">Testimonials</a></li>
 					</ul>
 				</nav>
             </div>
@@ -53,7 +53,7 @@
 				<p class="large-hero--text">We create soul restoring journeys
 					that inspire you to be you.</p>
 				<p>
-					<a class="btn btn--orange btn--large" href="#">Get Started
+					<a class="btn btn--orange btn--large open-modal" href="#">Get Started
 						Today</a>
 				</p>
 			</div>
@@ -72,22 +72,22 @@
 			</h3>
 			<div class="wrapper wrapper--narrow wrapper">
 				<img sizes="(min-width: 970px) 976px, 100vw"
-					srcset="assets/images/first-trip-low-res.jpg 565w,assets/images/first-trip.jpg 976w,assets/images/first-trip-hi-res.jpg 1952"
-					alt="Couple walking down a street.">
+					data-srcset="assets/images/first-trip-low-res.jpg 565w,assets/images/first-trip.jpg 976w,assets/images/first-trip-hi-res.jpg 1952"
+					alt="Couple walking down a street." class="lazyload">
 			</div>
 		</div>
 	</div>
-	<div id="our-beginning" class="page-section">
+	<div id="our-beginning2" class="page-section">
 		<div class="wrapper">
 			<div class="row">
 				<div class="row--large-4w row--b-margin-single-col">
 					<picture>
 					<source sizes="404px"
-						srcset="assets/images/our-start.jpg 404w,assets/images/our-start-hi-dpi.jpg 808w"
-						media="(min-width: 1200px)">
+						data-srcset="assets/images/our-start.jpg 404w,assets/images/our-start-hi-dpi.jpg 808w"
+						media="(min-width: 1200px)" class="lazyload">
 					<img
-						srcset="assets/images/our-start-landscape.jpg 800w,assets/images/our-start-landscape-hi-dpi.jpg 1600w"
-						alt="Our founder, Jane Doe"> </picture>
+						data-srcset="assets/images/our-start-landscape.jpg 800w,assets/images/our-start-landscape-hi-dpi.jpg 1600w"
+						alt="Our founder, Jane Doe"  class="lazyload"> </picture>
 				</div>
 				<div class="row-large-8w">
 					<div class="generic-content-container">
@@ -188,8 +188,8 @@
 				<div class="row--large-4w  row--t-padding row--b-margin-single-col">
 					<div class="testimonial">
 						<div class="testimonial--photo" width="160px" height="160px">
-							<img src="assets/images/testimonial-jane.jpg" width="160px"
-								height="160px">
+							<img data-srcset="assets/images/testimonial-jane.jpg" width="160px"
+								height="160px" class="lazyload">
 						</div>
 						<h3 class="testimonial--title">Jane Doe</h3>
 						<h4 class="testimonial--subtitle">9 Time Escaper</h4>
@@ -204,7 +204,7 @@
 				<div class="row--large-4w row--t-padding row--b-margin-single-col">
 					<div class="testimonial">
 						<div class="testimonial--photo" width="160px" height="160px">
-							<img src="assets/images/testimonial-john.jpg">
+							<img data-srcset="assets/images/testimonial-john.jpg" class="lazyload">
 						</div>
 						<h3 class="testimonial--title">John Smith</h3>
 						<h4 class="testimonial--subtitle">4 Time Escaper</h4>
@@ -218,8 +218,8 @@
 				<div class="row--large-4w row--t-padding">
 					<div class="testimonial">
 						<div class="testimonial--photo">
-							<img src="assets/images/testimonial-cat.jpg" width="160"
-								height="160">
+							<img data-srcset="assets/images/testimonial-cat.jpg" width="160"
+								height="160" class="lazyload">
 						</div>
 						<h3 class="testimonial--title">Cat McKitty</h3>
 						<h4 class="testimonial--subtitle">6 Time Escaper</h4>
@@ -239,28 +239,12 @@
 		<div class="wrapper">
 			<p>
 				<span class="footer--text">Copyright &copy; 2019 Clear View
-					Escapes. All rights reserved.</span> <a class="btn btn--orange" href="#">Get
+					Escapes. All rights reserved.</span> <a class="btn btn--orange open-modal" href="#">Get
 					in Touch</a>
 			</p>
 		</div>
 	</footer>
 	<!-- Leave this commented out HTML here until you need it for an upcoming "modal" lesson
-  <div class="modal">
-    <div class="modal__inner">
-      <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Get in <strong>Touch</strong></h2>
-      <div class="wrapper wrapper--narrow">
-        <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>
-      </div>
-
-      <div class="social-icons">
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/twitter.svg" alt="Twitter"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/instagram.svg" alt="Instagram"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/youtube.svg" alt="YouTube"></a>
-      </div>
-    </div>
-    <div class="modal__close">X</div>
-  </div>
   This is the end of the "modal" reference HTML -->
 	<script src="bundled.js"></script>
 </body>

@@ -5,15 +5,15 @@ class scrollReveal
     constructor(elements)
     {
         console.log("scrollReveal: " +elements);
-        this.itemsToReveal =  elements;
+        this.itemsToReveal =  document.querySelectorAll(elements);
         this.itemsToReveal.forEach(item => item.classList.add("reveal-item"));
-        this.scrollThrottle = throttle(this.calcCaller, 200).bind(this);
+        this.scrollThrottle = throttle(this.doCalc, 200).bind(this);
         window.addEventListener("scroll", this.scrollThrottle);
     }
     
-    calcCaller()
+    doCalc()
     {
-        //console.log("calcCaller");
+        //console.log("doCalc");
         this.itemsToReveal.forEach(item => 
             {
                 this.checkForVisible(item);

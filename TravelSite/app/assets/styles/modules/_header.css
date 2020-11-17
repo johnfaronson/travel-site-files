@@ -4,12 +4,11 @@
 	z-index: 2;
 	width: 100%;
 	
-	@mixin atLarge
-	{
-        background-color: rgba(47, 85, 114, .3);
-        
-	}
-	
+    @mixin atLarge
+    {
+        position: fixed;
+    }
+
 	&--btn
 	{
        margin: .5rem 0 .5rem 0;
@@ -17,10 +16,10 @@
 	   {
            float: right;
 	   }
-	}
-	
-	&--nav
-	{
+    }
+    
+    &--nav
+    {
 	   @mixin atLarge
 	   {
             float: right;
@@ -42,19 +41,6 @@
             float: left;
             padding-right: 1.2rem;
         }
-       }
-       
-       a
-       {
-         color: white;
-         font-weight: 300;
-         display: block;
-         padding: 5px 0;
-         
-         @mixin atLarge
-         {
-             text-decoration: none;
-         }
        }
 	}
 	

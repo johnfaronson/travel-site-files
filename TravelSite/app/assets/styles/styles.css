@@ -11,7 +11,11 @@
 @import "modules/_section-title";
 @import "modules/_feature-item";
 @import "modules/_testimonial";
-@import "modules/_footer";
+@import "modules/_footer"; 
 @import "modules/_header";
 @import "modules/_reveal-item";
+@import "modules/_sticky-header";
+@import "modules/_section-link";
+@import "modules/_modal";
+@import "modules/_social-icons";
 @import "normalize.css";
